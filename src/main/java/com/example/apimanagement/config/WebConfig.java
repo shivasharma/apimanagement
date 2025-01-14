@@ -10,13 +10,13 @@ public class WebConfig implements WebMvcConfigurer {
    private String  frontendUrl;
 
     @Value("${backend.url}")
-    private String  backendurl;
+    private String  backendUrl;
 
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**") // Allow all endpoints
-                .allowedOrigins(frontendUrl,backendurl) // Allow requests from your React app
+                .allowedOrigins(frontendUrl,backendUrl) // Allow requests from your React app
                 .allowedMethods("GET", "POST", "PUT", "DELETE") // Specify allowed HTTP methods
                 .allowedHeaders("*") // Allow all headers
                 .allowCredentials(true); // Allow cookies and credentials
