@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/employees")
-
+@CrossOrigin
 public class EmployeeController {
 
 
